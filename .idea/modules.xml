@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/H265Decode.iml" filepath="$PROJECT_DIR$/H265Decode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidH265Codec.iml" filepath="$PROJECT_DIR$/androidH265Codec.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

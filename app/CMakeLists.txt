@@ -29,7 +29,7 @@ set(LINK_DIR "${PROJECT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}")
 
 
 add_library( x265-lib
-             STATIC
+             SHARED
              IMPORTED )
 
 set_target_properties( # Specifies the target library.
@@ -39,7 +39,7 @@ set_target_properties( # Specifies the target library.
                        PROPERTIES IMPORTED_LOCATION
 
                        # Provides the path to the library you want to import.
-                       ${LINK_DIR}/libx265.a )
+                       ${LINK_DIR}/libx265.so )
 
 
 

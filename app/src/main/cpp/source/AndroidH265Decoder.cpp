@@ -77,6 +77,7 @@ JNIEXPORT jboolean JNICALL Java_ican_ytx_com_h265decode_H265Decoder_decode(JNIEn
 
 
 
+    return 0;
 }
 
 
