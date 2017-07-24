@@ -39,8 +39,17 @@ public class H265Decoder {
     private static native void nativeInit();
 
     static {
-       // System.loadLibrary("x265");
+        System.loadLibrary("x265");
         System.loadLibrary("h265decoder");
+
+
+        System.loadLibrary("avutil-55");
+        System.loadLibrary("swresample-2");
+        System.loadLibrary("swscale-4");
+        System.loadLibrary("avcodec-57");
+        System.loadLibrary("avformat-57");
+        System.loadLibrary("avfilter-6");
+
         nativeInit();
     }
     public H265Decoder(){

@@ -42,7 +42,84 @@ set_target_properties( # Specifies the target library.
                        ${LINK_DIR}/libx265.so )
 
 
+add_library( avutil-lib
+             SHARED
+             IMPORTED )
 
+set_target_properties( # Specifies the target library.
+                       avutil-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libavutil-55.so )
+
+add_library( swscale-lib
+             SHARED
+             IMPORTED )
+
+set_target_properties( # Specifies the target library.
+                       swscale-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libswscale-4.so )
+
+add_library( swresample-lib
+             SHARED
+             IMPORTED )
+
+set_target_properties( # Specifies the target library.
+                       swresample-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libswresample-2.so )
+
+
+add_library( avcodec-lib
+             SHARED
+             IMPORTED )
+
+set_target_properties( # Specifies the target library.
+                       avcodec-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libavcodec-57.so )
+
+add_library( avformat-lib
+             SHARED
+             IMPORTED )
+
+set_target_properties( # Specifies the target library.
+                       avformat-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libavformat-57.so )
+
+add_library( avfilter-lib
+             SHARED
+             IMPORTED )
+
+set_target_properties( # Specifies the target library.
+                       avfilter-lib
+
+                       # Specifies the parameter you want to define.
+                       PROPERTIES IMPORTED_LOCATION
+
+                       # Provides the path to the library you want to import.
+                       ${LINK_DIR}/libavfilter-6.so )
 
 find_library( # Sets the name of the path variable.
               log-lib
@@ -61,4 +138,10 @@ target_link_libraries( # Specifies the target library.
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib}
-                       x265-lib)
+                       x265-lib
+                       avutil-lib
+                       swscale-lib
+                       swresample-lib
+                       avcodec-lib
+                       avformat-lib
+                       avfilter-lib)
