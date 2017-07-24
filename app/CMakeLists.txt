@@ -17,7 +17,7 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
-             src/main/cpp/source/AndroidH265Decoder.cpp )
+             src/main/cpp/src/AndroidH265DecoderJni.cpp )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by
@@ -27,19 +27,6 @@ add_library( # Sets the name of the library.
 include_directories(${PROJECT_SOURCE_DIR}/src/main/cpp/include)
 set(LINK_DIR "${PROJECT_SOURCE_DIR}/src/main/jniLibs/${ANDROID_ABI}")
 
-
-add_library( x265-lib
-             SHARED
-             IMPORTED )
-
-set_target_properties( # Specifies the target library.
-                       x265-lib
-
-                       # Specifies the parameter you want to define.
-                       PROPERTIES IMPORTED_LOCATION
-
-                       # Provides the path to the library you want to import.
-                       ${LINK_DIR}/libx265.so )
 
 
 add_library( avutil-lib
@@ -138,7 +125,6 @@ target_link_libraries( # Specifies the target library.
                        # Links the target library to the log library
                        # included in the NDK.
                        ${log-lib}
-                       x265-lib
                        avutil-lib
                        swscale-lib
                        swresample-lib

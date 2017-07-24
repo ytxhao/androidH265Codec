@@ -4,7 +4,7 @@ android {
     compileSdkVersion 23
     buildToolsVersion '25.0.0'
     defaultConfig {
-        applicationId "ican.ytx.com.h265decode"
+        applicationId "com.decoder.xiaomi"
         minSdkVersion 18
         targetSdkVersion 22
         versionCode 1

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="ican.ytx.com.h265decode.MainActivity">
+    tools:context="com.decoder.xiaomi.MainActivity">
 
 
 
