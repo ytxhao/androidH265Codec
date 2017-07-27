@@ -1,4 +1,4 @@
-package com.decoder.xiaomi;
+package ican.ytx.com.h265decode;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
