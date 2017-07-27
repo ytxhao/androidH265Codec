@@ -13,13 +13,13 @@
         android:id="@+id/bt_encode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="h275encode" />
+        android:text="h265encode" />
 
 
     <Button
         android:id="@+id/bt_decode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="h275decode" />
+        android:text="h265decode" />
 
 </LinearLayout>
